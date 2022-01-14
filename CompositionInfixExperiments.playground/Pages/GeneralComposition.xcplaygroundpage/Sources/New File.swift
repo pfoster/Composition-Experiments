@@ -271,7 +271,7 @@ public func <*<X,Y>(lhs: @escaping (Y) -> (), rhs: @escaping (X) ->Y) -> ((X) ->
 
 public func map<T, U>(array: [T], morphism: (T) -> U) -> [U] { return array.map(morphism) }
 
-public func flatMap<T,U>(array: [T], morphism: (T) -> U?) -> [U] { return array.flatMap(morphism) }
+public func flatMap<T,U>(array: [T], morphism: (T) -> U?) -> [U] { return array.compactMap(morphism) }
 
 public func filter<T>(array: [T], filter: (T) -> Bool) -> [T] { return array.filter(filter) }
 
